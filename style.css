@@ -1,0 +1,100 @@
+:root{
+    --light-gray: #B0B0B0;
+    --dark-liver: #505050;
+    --eerie-black: #1C1C1C;
+    --vivid-gamboge: #FF9500;
+    --white-text: #fff;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#calc{
+    width: 330px;
+    height: 460px;
+    background-color: var(--eerie-black);
+    border-radius: 24px;
+    align-self: center;
+    box-shadow: 2px 3px 3px 2px black;
+}
+
+.result__window{
+    padding: 16px 30px 12px 0px;
+    color: var(--white-text);
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    letter-spacing: 2;
+}
+
+.calc__buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 8px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s linear;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn.num{
+    background-color: var(--dark-liver);
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.btn.num:hover{
+    background-color: #888888;
+}
+
+.btn.num.zero{
+    width: 120px;
+    border-radius: 60px;
+    grid-column: span 2;
+    padding: 0px 10px;
+}
+
+.btn.oper{
+    background-color: var(--light-gray);
+    color: black;
+    font-size: 1.5rem;
+}
+
+.btn.oper:hover{
+    background-color: #D8D8D8;
+}
+
+.btn.oper-math{
+    background-color: var(--vivid-gamboge);
+    color: var(--white-text);
+    font-size: 1.6rem;
+}
+
+.btn.oper-math:hover{
+    background-color: #FFBF00;
+}
+
+.btn.oper-math:checked{
+    background-color: #FFBF00;
+}
